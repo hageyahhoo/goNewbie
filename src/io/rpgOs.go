@@ -8,15 +8,19 @@ import (
 
 // TODO Add UT
 func main() {
+	// TODO Add error handling & logging
+	if len(os.Args) != 3 {
+		fmt.Println("You need to pass 2 arguments. HP and Attack.")
+		os.Exit(9)
+	}
+
 	var (
 		hp     int
 		attack int
 		result int
 	)
 
-	// TODO Add error handling & logging
 	// TODO Check convert error
-	// TODO Check length error of Args
 	hp, _ = strconv.Atoi(os.Args[1])
 	attack, _ = strconv.Atoi(os.Args[2])
 	result = hp / attack
