@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 )
@@ -29,4 +30,6 @@ func main() {
 	}
 
 	fmt.Println("HP:", hp, "Attack:", attack, "Result:", result)
+	io.WriteString(os.Stdout, "DONE\n")
+	io.WriteString(os.Stderr, "Fin.\n")
 }
