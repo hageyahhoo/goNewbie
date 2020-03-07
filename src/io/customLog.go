@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-var LOG_FILE = "/Users/hageyahhoo/repository/src/goNewbie/custom.log"
+var LOG_FILE = "./custom.log"
 
 func main() {
 	f, err := os.OpenFile(LOG_FILE, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
